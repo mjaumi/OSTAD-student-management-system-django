@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CDN link for Tailwind CSS declared here -->
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+
+    <title>
+        {% block title %} Home {% endblock %} || Student Management System
+    </title>
+</head>
+
+<body>
+    <header class="w-4/5 mx-auto border-b-2 border-gray-700 py-3 px-5">
+        <nav class="flex items-center justify-between">
+            <h1 class="font-semibold text-emerald-500 text-3xl">Student List</h1>
+
+            <button type="button"
+                class="bg-sky-500 text-white px-8 py-2 cursor-pointer hover:opacity-70 duration-300 rounded-md">
+                Add Student
+            </button>
+        </nav>
+    </header>
+
+    <main class="w-4/5 mx-auto min-h-[500px]">
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    <footer class="w-4/5 mx-auto border-t border-gray-600 text-sm text-gray-500 text-center mt-10">
+        <p>Student Management System @2025</p>
+    </footer>
+</body>
+
+</html>
