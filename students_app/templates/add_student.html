@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+
+{% block title %} Add Student {% endblock %}
+
+{% block content %}
+<section class="w-2/5 mx-auto">
+    <h2 class="text-xl font-semibold text-emerald-500 text-center py-2">Add Student Form</h2>
+
+    <form action="" method="post" class="space-y-4">
+        {% csrf_token %}
+
+        <div>
+            <label for="name">
+                Name
+                <span class="text-red-600 font-semibold">*</span>
+            </label>
+            <input type="text" id="name" name="name" class="border-2 rounded-md w-full px-2 py-1"
+                placeholder="Enter your name here..." required>
+        </div>
+
+        <div>
+            <label for="email">
+                Email
+                <span class="text-red-600 font-semibold">*</span>
+            </label>
+            <input type="email" id="email" name="email" class="border-2 rounded-md w-full px-2 py-1"
+                placeholder="Enter your email here..." required>
+        </div>
+
+        <div>
+            <label for="phone_no">
+                Phone Number
+                <span class="text-red-600 font-semibold">*</span>
+            </label>
+            <input type="text" id="phone_no" name="phone_no" class="border-2 rounded-md w-full px-2 py-1"
+                placeholder="Enter your phone number here..." required>
+        </div>
+
+        <div>
+            <label for="course_name">
+                Course Name
+                <span class="text-red-600 font-semibold">*</span>
+            </label>
+            <input type="text" id="course_name" name="course_name" class="border-2 rounded-md w-full px-2 py-1"
+                placeholder="Enter your course name here..." required>
+        </div>
+
+        <div class="w-3/5 mx-auto">
+            <button type="submit"
+                class="w-full bg-sky-500 text-white px-8 py-2 cursor-pointer hover:opacity-70 duration-300 rounded-md">
+                Add Student
+            </button>
+        </div>
+    </form>
+</section>
+{% endblock %}
