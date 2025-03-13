@@ -38,3 +38,11 @@ def update(request, student_id):
         return redirect('/')
 
     return render(request, 'update_student.html', {'student': student})
+
+def delete(request, student_id):
+    targeted_student = Student.objects.get(id=student_id)
+
+    targeted_student.delete()
+    messages.success(request, 'Student Deleted Successfully!!')
+
+    return redirect('/')
